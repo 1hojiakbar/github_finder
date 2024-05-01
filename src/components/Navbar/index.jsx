@@ -1,16 +1,20 @@
 import React from "react";
-import { Container, Form } from "./style";
-import Search from "../Generic/Input/search";
-import Button from "../Generic/Button/index";
+import { Body, Container, Items, Nav, NavItems } from "./style";
+import { Outlet } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <Container>
-      <h1>Navbar</h1>
-      <Form>
-        <Search placeholder={"search"} inpWidth={"100%"} size={"large"} />
-        <Button type={"primary"} title={"submit"} size={"large"} />
-      </Form>
+      <Nav>
+        <Nav.Title>Github Finder</Nav.Title>
+        <NavItems>
+          <Items to={"/home"}>Home</Items>
+          <Items to={"/about"}>About</Items>
+        </NavItems>
+      </Nav>
+      <Body>
+        <Outlet />
+      </Body>
     </Container>
   );
 };
