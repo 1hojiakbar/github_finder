@@ -14,8 +14,6 @@ const Nav = styled.div`
   ${flex}
   align-items: center;
   justify-content: space-between;
-  position: sticky;
-  top: 0;
   width: 100%;
   height: 60px;
   background-color: var(--primaryColor);

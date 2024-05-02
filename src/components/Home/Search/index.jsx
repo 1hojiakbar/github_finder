@@ -20,6 +20,10 @@ function Search({ onSearch }) {
     }
   };
 
+  const onClear = () => {
+    setUserNick("");
+  };
+
   return (
     <SearchContainer>
       {status === "error" && (

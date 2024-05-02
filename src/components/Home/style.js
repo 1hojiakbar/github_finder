@@ -28,7 +28,11 @@ const SearchContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   row-gap: 1rem;
-  margin-top: 5rem;
+  margin-top: 1rem;
 `;
 
-export { Container, Form, SearchContainer };
+const MainWrapper = styled.div`
+  padding: 0 10%;
+`;
+
+export { Container, Form, SearchContainer, MainWrapper };

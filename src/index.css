@@ -12,6 +12,8 @@
 }
 
 body {
-  background: var(--bodyBackgroundColor);
+  background-image: url("../src/assets/images/background-img.png");
+  background-position: center;
+  background-size: cover;
   min-height: 100vh;
 }
