@@ -1,22 +1,31 @@
-import API from "../../utils";
-import { Container, Form } from "./style";
 import { useState } from "react";
-import Search from "./Search";
+import axios from "axios";
+import API from "../../utils";
 import Profile from "./Profile";
+import Loading from "./Loader";
+import Search from "./Search";
+import { Container } from "./style";
 
 const Home = () => {
-  const [user, setUser] = useState(null);
+  const [users, setUsers] = useState(null);
+  const [loading, setLoading] = useState(false);
 
-  const searchUser = async (username) => {
-    const response = await fetch(`${API}/${username}`);
-    const data = await response.json();
-    setUser(data);
+  const searchUser = async ({ userNick }) => {
+    setLoading(true);
+    try {
+      const response = await axios(`${API}${userNick}`);
+      setUsers(response.data.items);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <Container>
       <Search onSearch={searchUser} />
-      <Profile user={user} />
+      {loading ? <Loading /> : <Profile users={users} />}
     </Container>
   );
 };

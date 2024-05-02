@@ -1,14 +1,21 @@
-import React from "react";
+import { Container } from "../style";
 
-function Profile({ user }) {
-  if (!user) return null;
+function Profile({ users }) {
+  if (!users) return null;
 
   return (
-    <div>
-      <h2>{user.name || "not found"}</h2>
-      <img src={user.avatar_url} alt="avatar" width="100" />
-      <p>{user.bio || "not found"}</p>
-    </div>
+    <Container>
+      <ul>
+        {users.map((user) => (
+          <li key={user.id}>
+            {user.login} -
+            <a href={user.html_url} target="_blank" rel="noopener noreferrer">
+              Profil
+            </a>
+          </li>
+        ))}
+      </ul>
+    </Container>
   );
 }
 
