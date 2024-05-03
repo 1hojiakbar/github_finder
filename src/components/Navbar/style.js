@@ -63,7 +63,7 @@ const Items = styled(NavLink)`
   transition: all 300ms;
   border-radius: 0.8em;
   &:hover {
-    background-color: #777;
+    background-color: #999;
     color: #000;
   }
 `;

@@ -35,7 +35,7 @@ const User = () => {
   return (
     <Container>
       <Title
-        style={{ textAlign: "center", color: "black", marginTop: "0.5rem" }}
+        style={{ textAlign: "center", color: "#fff", marginTop: "0.5rem" }}
       >
         {userData ? userData.name : "User Data Loading..."}
       </Title>

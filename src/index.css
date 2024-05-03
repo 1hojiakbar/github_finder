@@ -12,6 +12,6 @@
 }
 
 body {
-  background: #999;
+  background: var(--bodyBackgroundColor);
   min-height: 100vh;
 }
