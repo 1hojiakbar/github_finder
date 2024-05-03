@@ -25,6 +25,7 @@ Nav.Title = styled.h1`
   align-items: center;
   column-gap: 7px;
   color: #fff;
+  cursor: pointer;
 `;
 
 Nav.Title.Image = styled.img`
