@@ -1,16 +1,13 @@
-import { Image, Button, Flex } from "antd";
-import { Container, MainWrapper } from "../style";
+import { Image, Button, Flex, Typography } from "antd";
+import { Container, MainWrapper, ProfileWrapper, UserProfile } from "../style";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Col, Divider, Row } from "antd";
+const { Title } = Typography;
 
 function Profile({ users }) {
   const [status, setStatus] = useState(true);
   const navigate = useNavigate();
-  const style = {
-    background: "#0092ff",
-    padding: "8px 0",
-  };
 
   if (!users) return null;
 
@@ -21,9 +18,9 @@ function Profile({ users }) {
   return (
     <Container>
       <MainWrapper>
-        <Row>
+        <ProfileWrapper>
           {users.map((user) => (
-            <Col span={6} key={user.id}>
+            <UserProfile span={6} key={user.id}>
               {status && (
                 <Image
                   width={100}
@@ -33,10 +30,19 @@ function Profile({ users }) {
                   onError={() => setStatus(false)}
                 />
               )}
-              <Button onClick={() => handleMoreClick(user)}>More</Button>
-            </Col>
+              <Title code level={5} style={{ whiteSpace: "nowrap" }}>
+                {user.login}
+              </Title>
+              <Button
+                type="default"
+                style={{ width: "100%" }}
+                onClick={() => handleMoreClick(user)}
+              >
+                More
+              </Button>
+            </UserProfile>
           ))}
-        </Row>
+        </ProfileWrapper>
       </MainWrapper>
     </Container>
   );

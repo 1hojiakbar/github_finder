@@ -33,6 +33,9 @@ function Search({ onSearch }) {
         <Space>
           <Input
             allowClear
+            style={{
+              width: "100%",
+            }}
             size="large"
             value={userNick}
             onChange={(e) => setUserNick(e.target.value)}

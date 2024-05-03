@@ -56,9 +56,11 @@ const NavItems = styled.div`
 const Items = styled(NavLink)`
   color: white;
   text-decoration: none;
+  user-select: none;
+  cursor: pointer;
   padding: 7px 10px;
   transition: all 300ms;
-  border-radius: 0.4em;
+  border-radius: 0.8em;
   &:hover {
     background-color: #777;
     color: #000;
