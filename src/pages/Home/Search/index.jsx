@@ -1,6 +1,6 @@
 import { Alert, Button, Input, Space } from "antd";
 import { useEffect, useState } from "react";
-import { Form, SearchContainer } from "../style";
+import { Form, SearchButton, SearchContainer, SearchInput } from "../style";
 
 function Search({ onSearch }) {
   const [userNick, setUserNick] = useState("");
@@ -26,29 +26,26 @@ function Search({ onSearch }) {
 
   return (
     <SearchContainer>
-      {status === "error" && (
-        <Alert description="Please enter something!" type="error" showIcon />
-      )}
       <Form onSubmit={onSubmit}>
         <Space>
-          <Input
+          <SearchInput
             allowClear
-            style={{
-              width: "100%",
-            }}
-            size="large"
             value={userNick}
+            size="large"
             onChange={(e) => setUserNick(e.target.value)}
             onKeyPress={(e) => e.key === "Enter" && onSubmit(e)}
             placeholder={
               status === "error" ? "Enter something" : "Search GitHub Users"
             }
           />
-          <Button type="primary" size="large" onClick={onSubmit}>
-            Search
-          </Button>
+          <SearchButton type="primary" onClick={onSubmit}>
+            Search<i class="fa-solid fa-magnifying-glass"></i>
+          </SearchButton>
         </Space>
       </Form>
+      {status === "error" && (
+        <Alert description="Please enter something!" type="error" showIcon />
+      )}
     </SearchContainer>
   );
 }

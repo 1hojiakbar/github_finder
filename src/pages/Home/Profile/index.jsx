@@ -23,8 +23,9 @@ function Profile({ users }) {
             <UserProfile span={6} key={user.id}>
               {status && (
                 <Image
+                  preview={false}
                   width={100}
-                  style={{ borderRadius: "50%" }}
+                  style={{ borderRadius: "50%", cursor: "pointer" }}
                   src={user.avatar_url}
                   alt="User Image"
                   onError={() => setStatus(false)}

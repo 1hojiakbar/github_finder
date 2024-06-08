@@ -1,3 +1,4 @@
+import { Button, Input } from "antd";
 import styled, { css } from "styled-components";
 
 const flex = css`
@@ -55,6 +56,25 @@ const UserProfile = styled.div`
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 `;
 
+const SearchInput = styled(Input)`
+  width: 400px;
+  height: 54px;
+  font-size: 20px;
+  ::placeholder {
+    font-size: 20px;
+  }
+`;
+
+const SearchButton = styled(Button)`
+  ${flex}
+  justify-content: center;
+  align-items: center;
+  column-gap: 12px;
+  width: 140px;
+  height: 54px;
+  font-size: 20px;
+`;
+
 export {
   Container,
   Form,
@@ -62,4 +82,6 @@ export {
   MainWrapper,
   ProfileWrapper,
   UserProfile,
+  SearchInput,
+  SearchButton,
 };

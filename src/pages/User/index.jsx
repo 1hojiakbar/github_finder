@@ -6,8 +6,11 @@ import { useState, useEffect } from "react";
 import {
   Container,
   UserDataContainer,
+  UserDataWrapper,
+  UserImage,
   UserImgContainer,
   UserProfileDataWrapper,
+  ViewButton,
 } from "./style";
 const { Title, Paragraph, Text } = Typography;
 
@@ -34,73 +37,80 @@ const User = () => {
 
   return (
     <Container>
-      <Title
-        style={{ textAlign: "center", color: "#fff", marginTop: "0.5rem" }}
-      >
-        {userData ? userData.name : "User Data Loading..."}
-      </Title>
       <UserDataContainer>
         <UserImgContainer>
-          <Image
-            style={{ width: 150, borderRadius: 7 }}
+          <UserImage
+            style={{ width: 200, borderRadius: 7 }}
             src={user.avatar_url}
             alt={userData ? userData.name : "a picture of user"}
           />
         </UserImgContainer>
-        {userData && (
-          <>
-            <Paragraph strong style={{ color: "white", paddingLeft: 15 }}>
-              Bio:{" "}
-              <Text style={{ color: "white" }}>{userData.bio || "none"}</Text>
-            </Paragraph>
-            <UserProfileDataWrapper>
-              <Paragraph strong style={{ color: "white" }}>
-                Location:{" "}
-                <Text style={{ color: "white" }}>
-                  {userData.location || "none"}
-                </Text>
-              </Paragraph>
-              <UserProfileDataWrapper.Followers>
-                <Button
-                  type="text"
-                  style={{
-                    background: "#525CEB",
-                    color: "white",
-                  }}
-                >
-                  Followers:
-                  <Text strong style={{ color: "white", paddingLeft: ".4rem" }}>
-                    {userData.followers}
-                  </Text>
-                </Button>
-                <Button
-                  type="text"
-                  style={{
-                    background: "#525CEB",
-                    color: "white",
-                  }}
-                >
-                  Following:
-                  <Text strong style={{ color: "white", paddingLeft: ".4rem" }}>
-                    {userData.following}
-                  </Text>
-                </Button>
-              </UserProfileDataWrapper.Followers>
-            </UserProfileDataWrapper>
-            <UserImgContainer>
-              <Button
-                type="default"
+        <UserDataWrapper>
+          {userData && (
+            <>
+              <Title
                 style={{
-                  width: "80%",
+                  textAlign: "center",
+                  color: "#fff",
+                  marginTop: "0.5rem",
                 }}
+              >
+                {userData ? userData.name : "User Data Loading..."}
+              </Title>
+              <Paragraph strong style={{ color: "white", paddingLeft: 15 }}>
+                Bio:
+                <Text style={{ color: "white" }}>{userData.bio || "none"}</Text>
+              </Paragraph>
+              <UserProfileDataWrapper>
+                <Paragraph strong style={{ color: "white" }}>
+                  Location:
+                  <Text style={{ color: "white" }}>
+                    {` ${userData.location}` || "none"}
+                  </Text>
+                </Paragraph>
+                <UserProfileDataWrapper.Followers>
+                  <Button
+                    type="text"
+                    style={{
+                      background: "#525CEB",
+                      color: "white",
+                    }}
+                  >
+                    Followers:
+                    <Text
+                      strong
+                      style={{ color: "white", paddingLeft: ".4rem" }}
+                    >
+                      {userData.followers}
+                    </Text>
+                  </Button>
+                  <Button
+                    type="text"
+                    style={{
+                      background: "#525CEB",
+                      color: "white",
+                    }}
+                  >
+                    Following:
+                    <Text
+                      strong
+                      style={{ color: "white", paddingLeft: ".4rem" }}
+                    >
+                      {userData.following}
+                    </Text>
+                  </Button>
+                </UserProfileDataWrapper.Followers>
+              </UserProfileDataWrapper>
+              <ViewButton
+                type="default"
                 href={userData.html_url}
                 target="_blank"
               >
-                View Github Profile
-              </Button>
-            </UserImgContainer>
-          </>
-        )}
+                View Github Profile <i class="fa-solid fa-arrow-right-long"></i>
+              </ViewButton>
+            </>
+          )}
+        </UserDataWrapper>
       </UserDataContainer>
     </Container>
   );
