@@ -10,7 +10,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 89vh;
 `;
 
 const SearchContainer = styled.div`
@@ -75,6 +75,23 @@ const SearchButton = styled(Button)`
   font-size: 20px;
 `;
 
+const Footer = styled.footer`
+  ${flex}
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 90px;
+  margin-top: auto;
+  padding-top: 15px;
+  font-family: var(--font);
+  background-color: #334257;
+`;
+
+Footer.Title = styled.h3`
+  color: #999;
+  font-family: var(--font);
+`;
+
 export {
   Container,
   Form,
@@ -84,4 +101,5 @@ export {
   UserProfile,
   SearchInput,
   SearchButton,
+  Footer,
 };

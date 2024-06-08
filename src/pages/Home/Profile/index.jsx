@@ -2,7 +2,6 @@ import { Image, Button, Flex, Typography } from "antd";
 import { Container, MainWrapper, ProfileWrapper, UserProfile } from "../style";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Col, Divider, Row } from "antd";
 const { Title } = Typography;
 
 function Profile({ users }) {

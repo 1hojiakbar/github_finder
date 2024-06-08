@@ -5,6 +5,7 @@ import Profile from "./Profile";
 import Loading from "./Loader";
 import Search from "./Search";
 import { Container } from "./style";
+import Footer from "./Footer";
 
 const Home = () => {
   const [users, setUsers] = useState(null);
@@ -26,6 +27,7 @@ const Home = () => {
     <Container>
       <Search onSearch={searchUser} />
       {loading ? <Loading /> : <Profile users={users} />}
+      <Footer />
     </Container>
   );
 };
