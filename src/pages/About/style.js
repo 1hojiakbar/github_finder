@@ -24,6 +24,9 @@ DataWrapper.Paragraph = styled.p`
   line-height: 27px;
   padding: 1rem 0.7rem;
   background-color: #333;
+  .about {
+    font-family: var(--font);
+  }
 `;
 
 export { Container, DataWrapper };

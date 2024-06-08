@@ -7,18 +7,10 @@ const About = () => {
   return (
     <Container>
       <DataWrapper>
-        <DataWrapper.Title>About this Github Finder App</DataWrapper.Title>
+        <DataWrapper.Title>About the Github Finder</DataWrapper.Title>
         <DataWrapper.Paragraph>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus
-          laborum nulla ratione inventore distinctio facilis quos quas
-          voluptatum consectetur, cum nobis quis. Fuga, iure exercitationem eos
-          doloribus laudantium veritatis repellendus, culpa ipsum laboriosam
-          fugit impedit rem eligendi magni facere. Inventore sint quo ipsa,
-          exercitationem dolorem totam maiores dolores illo aut voluptatibus,
-          voluptas, possimus modi officiis voluptates deserunt corrupti porro
-          illum cum est? Saepe quis tenetur numquam quasi optio deleniti
-          debitis. Vel vitae possimus veniam nobis, quia voluptatem perspiciatis
-          saepe veritatis.
+          Using this github finder you can find github users quickly and easily
+          and you can see the profile information of the user you searched for.
         </DataWrapper.Paragraph>
         <Paragraph
           style={{
@@ -29,9 +21,10 @@ const About = () => {
             borderRadius: "0.6rem",
             padding: "0.4rem 0.7rem",
             border: "1px solid #333",
+            fontFamily: "var(--font)",
           }}
         >
-          View this project on my
+          View this project on my:
           <Button
             type="link"
             href="https://github.com/1hojiakbar/github_finder"
@@ -48,10 +41,11 @@ const About = () => {
             color: "white",
             borderRadius: "0.6rem",
             padding: "0.4rem 0.7rem",
+            fontFamily: "var(--font)",
             border: "1px solid #333",
           }}
         >
-          Created by
+          Created by:
           <Button type="link" href="https://github.com/1hojiakbar">
             Profile
           </Button>
