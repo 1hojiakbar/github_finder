@@ -18,6 +18,10 @@ const Nav = styled.div`
   height: 80px;
   background-color: var(--primaryColor);
   padding: 0 5rem;
+  @media (max-width: 800px) {
+    padding: 0 32px;
+    height: 70px;
+  }
 `;
 
 const Form = styled.div`
@@ -35,6 +39,9 @@ const HomeLogo = styled.div`
   ${flex}
   align-items: center;
   column-gap: 12px;
+  @media (max-width: 992px) {
+    column-gap: 5px;
+  }
 `;
 
 HomeLogo.Title = styled.h2`
@@ -45,6 +52,9 @@ HomeLogo.Title = styled.h2`
   cursor: pointer;
   margin-top: 6.3px;
   font-family: var(--font);
+  @media (max-width: 992px) {
+    font-size: 20px;
+  }
 `;
 
 HomeLogo.Image = styled.img`
@@ -52,6 +62,10 @@ HomeLogo.Image = styled.img`
   height: 40px;
   border-radius: 8px;
   cursor: pointer;
+  @media (max-width: 992px) {
+    width: 30px;
+    height: 30px;
+  }
 `;
 
 const NavItems = styled.div`
@@ -61,6 +75,12 @@ const NavItems = styled.div`
   width: 10%;
   column-gap: 30px;
   margin: 0 60px 0 10px;
+  @media (max-width: 992px) {
+    margin: 0 100px 0 0;
+  }
+  @media (max-width: 600px) {
+    margin: 0 130px 0 0;
+  }
 `;
 
 const Items = styled(NavLink)`
@@ -71,12 +91,17 @@ const Items = styled(NavLink)`
   user-select: none;
   cursor: pointer;
   padding: 14px 20px 10px 20px;
-  transition: all 300ms;
   border-radius: 0.8em;
+  transition: all 300ms;
   font-family: var(--font);
   &:hover {
     background-color: #ffffff;
     color: #000000;
+  }
+  @media (max-width: 992px) {
+    font-size: 18px;
+    padding: 10px 10px 7px 15px;
+    border-radius: 0.5em;
   }
 `;
 

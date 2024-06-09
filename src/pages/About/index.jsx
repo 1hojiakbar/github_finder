@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, DataWrapper } from "./style";
 import { Button, Space, Typography } from "antd";
+import Footer from "../Home/Footer";
 const { Paragraph, Text } = Typography;
 
 const About = () => {
@@ -51,6 +52,9 @@ const About = () => {
           </Button>
         </Paragraph>
       </DataWrapper>
+      <div style={{ margin: "auto 0 0 0" }}>
+        <Footer />
+      </div>
     </Container>
   );
 };

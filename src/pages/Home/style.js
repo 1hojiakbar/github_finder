@@ -10,7 +10,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 89vh;
+  height: 100vh;
 `;
 
 const SearchContainer = styled.div`
@@ -38,10 +38,27 @@ const MainWrapper = styled.div`
 
 const ProfileWrapper = styled.div`
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: 150px 150px 150px 150px 150px 150px;
+  justify-content: center;
   gap: 2rem;
   width: 60%;
   margin-bottom: 2rem;
+  @media (max-width: 1190px) {
+    grid-template-columns: 170px 170px 170px 170px;
+  }
+
+  @media (min-width: 1400px) {
+    grid-template-columns: 180px 180px 180px 180px 180px 180px;
+  }
+
+  @media (min-width: 1500px) {
+    grid-template-columns: 220px 220px 220px 220px 220px 220px;
+    gap: 1rem;
+  }
+
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
 `;
 
 const UserProfile = styled.div`
@@ -63,6 +80,23 @@ const SearchInput = styled(Input)`
   ::placeholder {
     font-size: 20px;
   }
+  @media (max-width: 992px) {
+    width: 350px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  @media (max-width: 768px) {
+    width: 300px;
+    height: 47px;
+    font-size: 16px;
+  }
+
+  @media (max-width: 567px) {
+    width: 250px;
+    height: 40px;
+    font-size: 14px;
+  }
 `;
 
 const SearchButton = styled(Button)`
@@ -73,6 +107,23 @@ const SearchButton = styled(Button)`
   width: 140px;
   height: 54px;
   font-size: 20px;
+  @media (max-width: 992px) {
+    width: 120px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  @media (max-width: 768px) {
+    width: 100px;
+    height: 47px;
+    font-size: 16px;
+  }
+
+  @media (max-width: 567px) {
+    width: 90px;
+    height: 40px;
+    font-size: 14px;
+  }
 `;
 
 const Footer = styled.footer`
@@ -80,16 +131,39 @@ const Footer = styled.footer`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 90px;
+  height: 70px;
+  min-height: 0px;
   margin-top: auto;
   padding-top: 15px;
   font-family: var(--font);
   background-color: #334257;
+  @media (max-width: 992px) {
+    height: 60px;
+  }
+
+  @media (max-width: 768px) {
+    height: 50px;
+  }
+
+  @media (max-width: 567px) {
+    height: 40px;
+  }
 `;
 
 Footer.Title = styled.h3`
   color: #999;
   font-family: var(--font);
+  @media (max-width: 992px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 567px) {
+    font-size: 14px;
+  }
 `;
 
 export {
