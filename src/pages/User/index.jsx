@@ -49,6 +49,7 @@ const User = () => {
           {userData && (
             <>
               <Title
+              className="user-name"
                 style={{
                   textAlign: "center",
                   color: "#fff",

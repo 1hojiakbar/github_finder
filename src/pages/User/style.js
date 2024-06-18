@@ -10,6 +10,11 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
+  .user-name {
+    @media (max-width: 1080px) {
+      font-size: 26px;
+    }
+  }
 `;
 
 const UserDataContainer = styled.div`
@@ -24,6 +29,21 @@ const UserDataContainer = styled.div`
   background-color: #1f2544;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  @media (max-width: 1080px) {
+    display: grid;
+    grid-template-columns: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 22px 0 0 0;
+    height: 600px;
+    width: 80%;
+  }
+  @media (max-width: 567px) {
+    padding: 22px 0 0 0;
+    height: 100vh;
+    width: 100%;
+  }
 `;
 
 const UserProfileDataWrapper = styled.div`
@@ -38,6 +58,9 @@ const UserImgContainer = styled.div`
   ${flex}
   justify-content: center;
   width: 30%;
+  @media (max-width: 1080px) {
+    width: 100%;
+  }
 `;
 
 const UserImage = styled(Image)`
@@ -53,6 +76,13 @@ UserProfileDataWrapper.Followers = styled.div`
 const UserDataWrapper = styled.div`
   width: 70%;
   padding: 0 5%;
+  @media (max-width: 1080px) {
+    width: 100%;
+    padding: 0;
+  }
+  @media (max-width: 567px) {
+    width: 100%;
+  }
 `;
 
 const ViewButton = styled(Button)`
@@ -65,8 +95,16 @@ const ViewButton = styled(Button)`
   font-size: 18px;
   height: 50px;
   column-gap: 20px;
+  @media (max-width: 1080px) {
+    width: 100%;
+    font-size: 17px;
+    height: 40px;
+  }
   & i {
     font-size: 26px;
+    @media (max-width: 1080px) {
+      font-size: 22px;
+    }
   }
 `;
 
