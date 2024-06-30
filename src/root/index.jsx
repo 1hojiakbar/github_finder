@@ -10,12 +10,11 @@ const Root = () => {
     <Container>
       <Routes>
         <Route element={<Navbar />}>
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/user" element={<User />} />
         </Route>
         <Route path="*" element={<h1>404</h1>} />
-        <Route path="/" element={<Navigate to={"/home"} />} />
       </Routes>
     </Container>
   );

@@ -50,7 +50,6 @@ HomeLogo.Title = styled.h2`
   color: #fff;
   font-size: 34px;
   cursor: pointer;
-  margin-top: 6.3px;
   font-family: var(--font);
   @media (max-width: 992px) {
     font-size: 20px;
@@ -90,7 +89,7 @@ const Items = styled(NavLink)`
   text-decoration: none;
   user-select: none;
   cursor: pointer;
-  padding: 14px 20px 10px 20px;
+  padding: 12px 20px 12px 20px;
   border-radius: 0.8em;
   transition: all 300ms;
   font-family: var(--font);
