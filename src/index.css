@@ -1,5 +1,5 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
 * {
   margin: 0;
@@ -9,10 +9,11 @@
 }
 
 :root {
-  --primaryColor: #26355d;
-  --bodyBackgroundColor: #202124;
-  /* --font: "Josefin Sans", sans-serif; */
+  --primaryColor: #222831;
+  --footerColor: #373a40;
+  --bodyBackgroundColor: #686d76;
   --font: "Alata", sans-serif;
+  --mono: "Roboto Mono", monospace;
 }
 
 body {

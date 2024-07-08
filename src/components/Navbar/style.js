@@ -8,6 +8,8 @@ const flex = css`
 const Container = styled.div`
   ${flex}
   flex-direction: column;
+  min-height: 100vh;
+  overflow-y: scroll;
 `;
 
 const Nav = styled.div`
@@ -17,6 +19,7 @@ const Nav = styled.div`
   width: 100%;
   height: 80px;
   background-color: var(--primaryColor);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   padding: 0 5rem;
   @media (max-width: 800px) {
     padding: 0 32px;

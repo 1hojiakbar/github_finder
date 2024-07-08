@@ -10,7 +10,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 `;
 
 const SearchContainer = styled.div`
@@ -131,18 +131,17 @@ const Footer = styled.footer`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 70px;
-  min-height: 0px;
+  height: 100px;
   margin-top: auto;
   padding-top: 15px;
-  font-family: var(--font);
-  background-color: #334257;
+  font-family: var(--mono);
+  background-color: var(--footerColor);
   @media (max-width: 992px) {
-    height: 60px;
+    height: 80px;
   }
 
   @media (max-width: 768px) {
-    height: 50px;
+    height: 60px;
   }
 
   @media (max-width: 567px) {
@@ -151,14 +150,11 @@ const Footer = styled.footer`
 `;
 
 Footer.Title = styled.h3`
-  color: #999;
-  font-family: var(--font);
-  @media (max-width: 992px) {
-    font-size: 18px;
-  }
-
+  color: #ffffff;
+  font-size: 16px;
+  font-family: var(--mono);
   @media (max-width: 768px) {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   @media (max-width: 567px) {

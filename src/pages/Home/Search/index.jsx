@@ -1,6 +1,7 @@
 import { Alert, Button, Input, Space } from "antd";
 import { useEffect, useState } from "react";
 import { Form, SearchButton, SearchContainer, SearchInput } from "../style";
+import ButtonGroup from "antd/es/button/button-group";
 
 function Search({ onSearch }) {
   const [userNick, setUserNick] = useState("");
@@ -27,7 +28,7 @@ function Search({ onSearch }) {
   return (
     <SearchContainer>
       <Form onSubmit={onSubmit}>
-        <Space>
+        <Space.Compact>
           <SearchInput
             allowClear
             value={userNick}
@@ -41,7 +42,7 @@ function Search({ onSearch }) {
           <SearchButton type="primary" onClick={onSubmit}>
             Search<i class="fa-solid fa-magnifying-glass"></i>
           </SearchButton>
-        </Space>
+        </Space.Compact>
       </Form>
       {status === "error" && (
         <Alert description="Please enter something!" type="error" showIcon />

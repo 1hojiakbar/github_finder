@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <FooterWrapper>
       <FooterWrapper.Title>
-        &#169; 2024 - {new Date().getFullYear()} Powered by Xojiakbar Isroilov
+        Copyright &#169; by Xojiakbar Isroilov
       </FooterWrapper.Title>
     </FooterWrapper>
   );

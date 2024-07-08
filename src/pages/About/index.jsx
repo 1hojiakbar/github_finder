@@ -21,8 +21,8 @@ const About = () => {
             color: "white",
             borderRadius: "0.6rem",
             padding: "0.4rem 0.7rem",
-            border: "1px solid #333",
-            fontFamily: "var(--font)",
+            fontFamily: "var(--mono)",
+            background: "#222831",
           }}
         >
           View this project on my:
@@ -42,8 +42,8 @@ const About = () => {
             color: "white",
             borderRadius: "0.6rem",
             padding: "0.4rem 0.7rem",
-            fontFamily: "var(--font)",
-            border: "1px solid #333",
+            fontFamily: "var(--mono)",
+            background: "#222831",
           }}
         >
           Created by:
