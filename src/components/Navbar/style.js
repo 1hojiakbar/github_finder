@@ -17,7 +17,7 @@ const Nav = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 80px;
+  height: 15vh;
   background-color: var(--primaryColor);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   padding: 0 5rem;

@@ -10,7 +10,8 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  min-height: 100vh;
+  height: 85vh;
+  min-height: 85vh;
 `;
 
 const SearchContainer = styled.div`
@@ -131,7 +132,8 @@ const Footer = styled.footer`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100px;
+  height: 15vh;
+  overflow-y: hidden;
   margin-top: auto;
   padding-top: 15px;
   font-family: var(--mono);
